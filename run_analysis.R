@@ -1,5 +1,4 @@
 # this function downloads archive and extract the file with power consumption data
-setwd('/Users/almaleksia/Documents/coursera/getdata/cp');
 loadAndUnpackData <- function(archiveUrl) { 
   temp <- tempfile();
   download.file(archiveUrl, temp, method = "curl");
@@ -93,5 +92,3 @@ tidyData <- tidyData[order(subject),];
 
 write.table(tidyData, 'tidy_data.txt', row.names = FALSE)
 detach(tidyData)
-
-
